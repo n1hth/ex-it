@@ -45,18 +45,18 @@ export function MessageBubble({
   let bubbleClasses = "";
   if (isUser) {
     if (isCompanion) {
-      // User bubble in companion mode: soft, rounded, warm
+      // User bubble in companion mode: brutalist but cute (sharp, thick border, drop shadow)
       bubbleClasses =
-        "bg-bubble-self text-bubble-text-self rounded-2xl rounded-br-sm border border-ink/8 shadow-sm";
+        "bg-bubble-self text-bubble-text-self rounded-none border-2 border-ink shadow-[3px_3px_0px_0px] shadow-ink/20";
     } else {
       bubbleClasses =
         "bg-bubble-self text-bubble-text-self rounded-none border-2 border-ink/15 shadow-[2px_2px_0px_0px] shadow-ink/10";
     }
   } else {
     if (isCompanion) {
-      // AI bubble in companion mode: the cute healing style
+      // AI bubble in companion mode: brutalist but cute (brand color, sharp, thick border)
       bubbleClasses =
-        "bg-gradient-to-br from-brand/12 to-accent/6 text-ink rounded-2xl rounded-bl-sm border border-brand/20 shadow-sm backdrop-blur-sm";
+        "bg-brand text-ink rounded-none border-2 border-ink shadow-[3px_3px_0px_0px] shadow-ink/20 backdrop-blur-sm";
     } else {
       bubbleClasses =
         "bg-bubble-other text-bubble-text-other rounded-none border-2 border-ink/15 shadow-[2px_2px_0px_0px] shadow-ink/10";
